@@ -6,8 +6,6 @@ body {
 	text-align: center;
 }
 
-img {
-	/* image-orientation: from-image; */
-	/* -webkit-transform: rotate(270deg); */
-    /* transform: rotate(270deg); */
+p {
+	text-indent: 2.0em;
 }
