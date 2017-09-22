@@ -8,6 +8,6 @@ body {
 
 img {
 	/* image-orientation: from-image; */
-	-webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
+	/* -webkit-transform: rotate(270deg); */
+    /* transform: rotate(270deg); */
 }
