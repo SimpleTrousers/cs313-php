@@ -1,0 +1,12 @@
+﻿.disDiv {
+    background-color: springgreen;
+    font-size: 40px;
+}
+
+.disDiv:hover {
+    font-weight: bold;
+}
+
+body {
+    text-align: center;
+}
