@@ -7,5 +7,7 @@ body {
 }
 
 img {
-	image-orientation: from-image;
+	/* image-orientation: from-image; */
+	-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
 }
