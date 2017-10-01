@@ -3,11 +3,12 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Michael's Monkeys</title>
+    <title>Mike's Monkeys</title>
 
     <link rel="stylesheet" type="text/css" href="shopping.css">
 </head>
 <body>
+    <h1>Mike's Monkeys!</h1>
     <form action="POST">
         <table>
             <tr>
