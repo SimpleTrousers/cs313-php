@@ -11,39 +11,9 @@
 
     <h1>Checkout!</h1>
     <form action="confirm.php" method="post">
-        <table>
         <?php
-        function baboon() {
-            if ($_POST["baboonChk"] != "") {
-                echo "<tr><td>Baboon!</td></tr>";
-            }
-        }
-
-        function marmoset() {
-            if ($_POST["marmosetChk"] != "") {
-                echo "<tr><td>Marmoset!</td></tr>";
-            }
-        }
-
-        function howler() {
-            if ($_POST["howlerChk"] != "") {
-                echo "<tr><td>Howler!</td></tr>";
-            }
-        }
-
-        function capuchin() {
-            if ($_POST["capuchinChk"] != "") {
-                echo "<tr><td>Capuchin!</td></tr>";
-                $_POST["capuchin"] = "capuchin";
-            }
-        }
-
-        baboon();
-        capuchin();
-        howler();
-        marmoset();
+        echo $_POST["capuchin"];
         ?>
-        </table>
         <input class="submit" type="submit" value="Confirm!">
     </form>
     <form action="cart.php">
