@@ -55,7 +55,7 @@
                     $900.00
                 </td>
                 <td>
-                    <input type="checkbox" name="capuchiniChk" value="baboon" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
+                    <input type="checkbox" name="capuchiniChk" value="capuchin" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
                 </td>
             </tr>
             <tr>
@@ -71,7 +71,7 @@
                     $250.00
                 </td>
                 <td>
-                    <input type="checkbox" name="howlerChk" value="baboon" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
+                    <input type="checkbox" name="howlerChk" value="howler" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
                 </td>
             </tr>
             <tr>
@@ -86,7 +86,7 @@
                     $2001.07
                 </td>
                 <td>
-                    <input type="checkbox" name="marmosetChk" value="baboon" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
+                    <input type="checkbox" name="marmosetChk" value="marmoset" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
                 </td>
             </tr>
         </table>
