@@ -14,7 +14,7 @@
     </form>
     <?php echo $_POST["marmosetChk"];
     echo $_POST["howlerChk"];
-    echo $_POST["baboonChk"];
+    baboon();
     echo $_POST["capuchinChk"]; ?>
 </body>
 </html>
