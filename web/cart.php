@@ -34,6 +34,7 @@
         function capuchin() {
             if ($_POST["capuchinChk"] != "") {
                 echo "<tr><td>Capuchin!</td></tr>";
+                $_POST["capuchin"] = "capuchin";
             }
         }
 
