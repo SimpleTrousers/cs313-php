@@ -28,6 +28,16 @@
                 <td>
                     <img src="baboon.jpg" />
                 </td>
+                <td>
+                    The yellow baboon is one of the most successful primates and it can eat
+                    pretty much any type of food that it comes across. They usually live 20-30 years.
+                </td>
+                <td>
+                    $300.00
+                </td>
+                <td>
+                <input type="checkbox" name="baboonChk" value="baboon" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
+                </td>
             </tr>
             <tr>
                 <td>
