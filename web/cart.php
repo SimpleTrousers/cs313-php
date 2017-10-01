@@ -45,5 +45,8 @@
         </table>
         <input class="submit" type="submit" value="Checkout!">
     </form>
+    <form action="browse.php">
+        <input class="submit" type="submit" value="Return to Browse">
+    </form>
 </body>
 </html>
