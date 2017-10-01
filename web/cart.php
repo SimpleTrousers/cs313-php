@@ -21,6 +21,7 @@
 
     function baboon() {
         echo $baboon;
+        echo $_POST["baboonChk"];
         if ($baboon == "baboon") {
             echo "POOOP";
         }
