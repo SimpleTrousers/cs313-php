@@ -14,7 +14,6 @@
     </form>
     <?php echo $_POST["marmosetChk"];
     echo $_POST["howlerChk"];
-    baboon();
     echo $_POST["capuchinChk"]; ?>
 </body>
 </html>
@@ -31,4 +30,6 @@ function baboon() {
         echo "POOOP";
     }
 }
+
+baboon();
 ?>
