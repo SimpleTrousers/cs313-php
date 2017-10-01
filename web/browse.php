@@ -29,29 +29,63 @@
                     <img src="baboon.jpg" />
                 </td>
                 <td>
-                    The yellow baboon is one of the most successful primates and it can eat
-                    pretty much any type of food that it comes across. They usually live 20-30 years.
+                    Using its ability to eat most of the food that it comes across and its adaptation skills to 
+                    areas where humans have populated has allowed the yellow baboon to survive where some other
+                    primates can't. They usually live 20-30 years.
                 </td>
                 <td>
                     $300.00
                 </td>
                 <td>
-                <input type="checkbox" name="baboonChk" value="baboon" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
+                    <input type="checkbox" name="baboonChk" value="baboon" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
                 </td>
             </tr>
             <tr>
                 <td>
                     <img src="capuchin.jpg" />
                 </td>
+                <td>
+                    Most people probably think of the white-headed capuchin when they think of monkeys. Many use
+                    them as pets and they are able to eat a variety of foods. It has been seen using herbs as
+                    medicine and other tools to help increase its odds. In a good home, it will probably
+                    live more than 30 years.
+                </td>
+                <td>
+                    $900.00
+                </td>
+                <td>
+                    <input type="checkbox" name="baboonChk" value="baboon" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
+                </td>
             </tr>
             <tr>
                 <td>
                     <img src="howler.jpg" />
                 </td>
+                <td>
+                    If you're into the whole, "Wake up to a roaring monkey" thing, but also into the, "Not so
+                    active during the day" thing, the black howler is a good choice for you! They'll probably act as a
+                    great alarm clock for about 20 years.
+                </td>
+                <td>
+                    $250.00
+                </td>
+                <td>
+                    <input type="checkbox" name="baboonChk" value="baboon" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
+                </td>
             </tr>
             <tr>
                 <td>
                     <img src="marmoset.jpg" />
+                </td>
+                <td>
+                    Super cute, the pygmy marmoset is the smallest monkey in the world. They typically eat the gum and sap from
+                    trees and they are also one of the more common pet monkeys. They live to be about 10-15 years.
+                </td>
+                <td>
+                    $2001.07
+                </td>
+                <td>
+                    <input type="checkbox" name="baboonChk" value="baboon" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
                 </td>
             </tr>
         </table>
