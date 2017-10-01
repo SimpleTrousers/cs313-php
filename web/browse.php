@@ -8,15 +8,23 @@
     <link rel="stylesheet" type="text/css" href="shopping.css">
 </head>
 <body>
-    <table>
-        <tr>
-            <td>
-                <img src="baboon.jpg" />
-                <img src="capuchin.jpg" />
-                <img src="howler.jpg" />
-                <img src="marmoset.jpg" />
-            </td>
-        </tr>
-    </table>
+    <form action="POST">
+        <table>
+            <tr>
+                <td>
+                    <img src="baboon.jpg" />
+                </td>
+                <td>
+                    <img src="capuchin.jpg" />
+                </td>
+                <td>
+                    <img src="howler.jpg" />
+                </td>
+                <td>
+                    <img src="marmoset.jpg" />
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
