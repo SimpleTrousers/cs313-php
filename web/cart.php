@@ -8,6 +8,11 @@
     <link rel="stylesheet" type="text/css" href="shopping.css">
 </head>
 <body>
+
+    <h1>Your Cart!</h1>
+    <form action="checkout.php" method="post">
+        <input class="submit" type="submit" value="Checkout!">
+    </form>
     <?php
     $baboon = $_POST["baboonChk"];
     $howler = $_POST["howlerChk"];
@@ -20,13 +25,8 @@
             echo "POOOP";
         }
     }
-    ?>
 
-    <h1>Your Cart!</h1>
-    <form action="checkout.php" method="post">
-        <input class="submit" type="submit" value="Checkout!">
-    </form>
-    <?php echo $_POST["marmosetChk"];
+    echo $_POST["marmosetChk"];
     echo $_POST["howlerChk"];
     baboon();
     echo $_POST["capuchinChk"]; ?>
