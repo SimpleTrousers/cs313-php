@@ -14,6 +14,6 @@
     echo $_POST["baboonChk"];
     echo $_POST["capuchinChk"]; ?>
 
-    <<button class="submit">Checkout!</button>
+    <button class="submit">Checkout!</button>
 </body>
 </html>
