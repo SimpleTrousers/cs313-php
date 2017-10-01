@@ -90,6 +90,7 @@
                 </td>
             </tr>
         </table>
+        <input type="submit">
     </form>
 </body>
 </html>
