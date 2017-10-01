@@ -55,7 +55,7 @@
                     $900.00
                 </td>
                 <td>
-                    <input type="checkbox" name="capuchiniChk" value="capuchin" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
+                    <input type="checkbox" name="capuchinChk" value="capuchin" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
                 </td>
             </tr>
             <tr>
