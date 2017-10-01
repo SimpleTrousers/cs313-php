@@ -26,6 +26,7 @@ $capuchin = $_POST["capuchinChk"];
 $marmoset = $_POST["marmosetChk"];
 
 function baboon() {
+    echo $baboon;
     if ($baboon == "baboon") {
         echo "POOOP";
     }
