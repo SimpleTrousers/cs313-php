@@ -9,11 +9,25 @@
 </head>
 <body>
     <h1>Your Cart!</h1>
+    <form action="checkout.php" method="post">
+        <input class="submit" type="submit" value="Checkout!">
+    </form>
     <?php echo $_POST["marmosetChk"];
     echo $_POST["howlerChk"];
     echo $_POST["baboonChk"];
     echo $_POST["capuchinChk"]; ?>
-
-    <button class="submit">Checkout!</button>
 </body>
 </html>
+
+<?php
+$baboon = $_POST["baboonChk"];
+$howler = $_POST["howlerChk"];
+$capuchin = $_POST["capuchinChk"];
+$marmoset = $_POST["marmosetChk"];
+
+function baboon() {
+    if ($baboon == "baboon") {
+        echo "POOOP";
+    }
+}
+?>
