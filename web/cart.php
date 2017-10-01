@@ -14,15 +14,8 @@
         <input class="submit" type="submit" value="Checkout!">
     </form>
     <?php
-    $baboon = $_POST["baboonChk"];
-    $howler = $_POST["howlerChk"];
-    $capuchin = $_POST["capuchinChk"];
-    $marmoset = $_POST["marmosetChk"];
-
     function baboon() {
-        echo $baboon;
-        echo $_POST["baboonChk"];
-        if ($baboon == "baboon") {
+        if ($_POST["baboonChk"] != "") {
             echo "POOOP";
         }
     }
