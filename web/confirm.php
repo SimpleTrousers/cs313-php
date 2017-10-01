@@ -11,5 +11,8 @@
 
     <h1>Order Confirmed!</h1>
     
+    <form action="browse.php">
+        <input class="submit" type="submit" value="Return to Browse">
+    </form>
 </body>
 </html>

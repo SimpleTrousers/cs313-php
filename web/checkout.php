@@ -10,7 +10,7 @@
 <body>
 
     <h1>Checkout!</h1>
-    <form action="checkout.php" method="post">
+    <form action="confirm.php" method="post">
         <table>
         <?php
         function baboon() {
@@ -44,7 +44,7 @@
         marmoset();
         ?>
         </table>
-        <input class="submit" type="submit" value="Checkout!">
+        <input class="submit" type="submit" value="Confirm!">
     </form>
     <form action="cart.php">
         <input class="submit" type="submit" value="Return to Cart">
