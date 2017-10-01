@@ -12,6 +12,9 @@
         <tr>
             <td>
                 <img src="baboon.jpg" />
+                <img src="capuchin.jpg" />
+                <img src="howler.jpg" />
+                <img src="marmoset.jpg" />
             </td>
         </tr>
     </table>
