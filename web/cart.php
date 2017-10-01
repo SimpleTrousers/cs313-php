@@ -11,18 +11,39 @@
 
     <h1>Your Cart!</h1>
     <form action="checkout.php" method="post">
+        <table>
+        <?php
+        function baboon() {
+            if ($_POST["baboonChk"] != "") {
+                echo "<tr><td>Baboon!</td></tr>";
+            }
+        }
+
+        function marmoset() {
+            if ($_POST["marmosetChk"] != "") {
+                echo "<tr><td>Marmoset!</td></tr>";
+            }
+        }
+
+        function howler() {
+            if ($_POST["howlerChk"] != "") {
+                echo "<tr><td>Howler!</td></tr>";
+            }
+        }
+
+        function capuchin() {
+            if ($_POST["capuchinChk"] != "") {
+                echo "<tr><td>Capuchin!</td></tr>";
+            }
+        }
+
+        baboon();
+        capuchin();
+        howler();
+        marmoset();
+        ?>
+        </table>
         <input class="submit" type="submit" value="Checkout!">
     </form>
-    <?php
-    function baboon() {
-        if ($_POST["baboonChk"] != "") {
-            echo "POOOP";
-        }
-    }
-
-    echo $_POST["marmosetChk"];
-    echo $_POST["howlerChk"];
-    baboon();
-    echo $_POST["capuchinChk"]; ?>
 </body>
 </html>
