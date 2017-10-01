@@ -86,11 +86,11 @@
                     $2001.07
                 </td>
                 <td>
-                    <input type="checkbox" name="marmosetChk" value="marmoset" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
+                    <input class="check" type="checkbox" name="marmosetChk" value="marmoset" <?php if(isset($_POST['baboonChk'])) echo "checked='checked'"; ?>  />
                 </td>
             </tr>
         </table>
-        <input type="submit">
+        <input class="submit" type="submit">
     </form>
 </body>
 </html>
