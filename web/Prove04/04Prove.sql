@@ -19,7 +19,10 @@ create table public.history
 create table public.appointment
 (
 	id serial not null primary key,
-	date date not null,
+	military_hour int not null,
+	day int not null,
+	month int not null,
+	year int not null,
 	doctor_id int not null references public.user(id),
 	patient_id int not null references public.user(id)
 );
