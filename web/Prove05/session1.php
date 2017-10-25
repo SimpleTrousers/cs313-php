@@ -49,6 +49,12 @@ foreach ($db->query('SELECT now()') as $row)
  print "<p>$row[0]</p>\n\n";
 }
 
+$stmt = $db->prepare('SELECT * FROM public.user');
+$stmt->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+print $rows;
+
 ?>
 
 <a href="https://cryptic-refuge-67781.herokuapp.com/Prove04/session2.php">Next Session</a>
