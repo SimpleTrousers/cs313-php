@@ -8,11 +8,11 @@ session_start();
 
 <?php
 // Set session variables
-$_SESSION["favcolor"] = "green";
-$_SESSION["favanimal"] = "cat";
+// $_SESSION["favcolor"] = "green";
+// $_SESSION["favanimal"] = "cat";
 // Echo session variables that were set on previous page
-echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
-echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
+// echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
+// echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
 
 // default Heroku Postgres configuration URL
 $dbUrl = getenv('DATABASE_URL');
