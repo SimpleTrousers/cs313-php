@@ -54,13 +54,15 @@ catch (PDOException $ex)
 $stmt = $db->prepare('SELECT * FROM public.user');
 $stmt->execute();
 
+print "This has also gone through?";
+
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
 	echo '<p>';
-    echo $row['id'];
+    echo $row['username'];
     echo '</p>';
 }
 
