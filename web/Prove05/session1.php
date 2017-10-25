@@ -56,7 +56,7 @@ $stmt->execute();
 
 print "This has also gone through?";
 
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
