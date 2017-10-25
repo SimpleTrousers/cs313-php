@@ -19,15 +19,11 @@ $dbUrl = getenv('DATABASE_URL');
 
 $dbopts = parse_url($dbUrl);
 
-print "<p>$dbUrl</p>\n\n";
-
 $dbHost = $dbopts["host"];
 $dbPort = $dbopts["port"];
 $dbUser = $dbopts["user"];
 $dbPassword = $dbopts["pass"];
 $dbName = ltrim($dbopts["path"],'/');
-
-print "<p>pgsql:host=$dbHost;port=$dbPort;dbname=$dbName</p>\n\n";
 
 try
 {
@@ -35,8 +31,6 @@ try
 	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 	// this line makes PDO give us an exception when there are problems, and can be very helpful in debugging!
     $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    
-    print "This has gone through";
 }
 catch (PDOException $ex)
 {
@@ -46,24 +40,19 @@ catch (PDOException $ex)
 	die();
 }
 
-// foreach ($db->query('SELECT now()') as $row)
-// {
-//  print "<p>$row[0]</p>\n\n";
-// }
-
 $stmt = $db->prepare('SELECT * FROM public.user');
 $stmt->execute();
-
-print "This has also gone through?";
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
-	echo '<p>';
-    echo $row['username'];
-    echo '</p>';
+	echo '<h1> Hello! Welcome back, ';
+    echo $row['first_name'];
+    echo $row['last_name'];
+    echo "!";
+    echo '</h1>';
 }
 
 ?>
