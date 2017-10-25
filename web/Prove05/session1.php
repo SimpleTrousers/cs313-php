@@ -53,7 +53,7 @@ $stmt = $db->prepare('SELECT * FROM public.user');
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-print $rows;
+print $rows(0);
 
 ?>
 
