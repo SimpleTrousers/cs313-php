@@ -115,7 +115,6 @@ function EndSession() {
 	session_destroy();
 
 	echo '<h1>Session Ended!</h1>';
-	sleep(50);
 }
 
 ?>
