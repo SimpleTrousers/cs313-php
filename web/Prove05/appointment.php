@@ -5,7 +5,7 @@ session_start();
 <html>
 <head>
 	<title>Appointments Page</title>
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<link rel="stylesheet" type="text/css" href="doctor.css">
 </head>
 <body>
 
