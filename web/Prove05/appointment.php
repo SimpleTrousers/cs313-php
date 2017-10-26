@@ -56,7 +56,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 ?>
 
 <form>
-	<table style="width:100%">
+	<table style="text-align: center;">
 		<tr>
 			<th>Military Hour</th>
 			<th>Day</th>
