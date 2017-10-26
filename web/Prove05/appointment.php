@@ -40,7 +40,10 @@ catch (PDOException $ex)
 	die();
 }
 
-$stmt = $db->prepare('SELECT * FROM public.user where username = doctor');
+$stmt = $db->prepare('SELECT * FROM public.user where username=:doctor');
+// $stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
+$stmt->bindValue(':doctor', 'doctor', PDO::PARAM_STR);
+// $stmt->bindValue(':name', $name, PDO::PARAM_STR);
 $stmt->execute();
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
