@@ -111,11 +111,11 @@ function EndSession() {
 	// remove all session variables
 	session_unset();
 
-	echo 'Session Ended!';
-	sleep(5);
-
 	// destroy the session 
 	session_destroy();
+
+	echo '<h1>Session Ended!</h1>';
+	sleep(15);
 }
 
 ?>
