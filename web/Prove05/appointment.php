@@ -4,6 +4,9 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
+<head>
+	<title>Appointments Page</title>
+</head>
 <body>
 
 <?php
@@ -41,7 +44,6 @@ catch (PDOException $ex)
 }
 
 $stmt = $db->prepare('SELECT * FROM public.user where username=:uname and password=:pword');
-// $stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
 $stmt->bindValue(':pword', $password, PDO::PARAM_STR);
 $stmt->bindValue(':uname', $username, PDO::PARAM_STR);
 $stmt->execute();
