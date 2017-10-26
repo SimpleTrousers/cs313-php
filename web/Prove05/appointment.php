@@ -97,10 +97,14 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 				</select>
 			</td>
 			<td>
-				
+				<input type="text" name="day" maxlength="2">
 			</td> 
-			<td>Yo</td>
-			<td>Yo</td>
+			<td>
+				<input type="text" name="month" maxlength="2">
+			</td>
+			<td>
+				<input type="text" name="year" maxlength="2">
+			</td>
 		</tr>
 	</table>
 </form>
