@@ -13,7 +13,7 @@ session_start();
         Username:
         <input type="text" name="uname"><br>
         Password:
-        <input type="text" name="pass"><br>
+        <input type="password" name="pass"><br>
         <input type="submit">
     </form>
 </body>
