@@ -1,11 +1,12 @@
 body {
-    background-color: #D7CEC7;
+    background-color: #d7cec7;
+    color: #76323F;
 }
 
 th, td {
     padding: 15px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #565656;
 }
 
 input[type=number] {
