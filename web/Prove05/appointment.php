@@ -112,6 +112,7 @@ function EndSession() {
 	session_unset();
 
 	echo 'Session Ended!';
+	sleep(1);
 
 	// destroy the session 
 	session_destroy();
