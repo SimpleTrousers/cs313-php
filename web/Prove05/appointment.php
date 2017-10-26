@@ -43,8 +43,8 @@ catch (PDOException $ex)
 }
 
 $stmt = $db->prepare('SELECT * FROM public.user where username=:uname and password=:pword');
-$stmt->bindValue(':pword', $password, PDO::PARAM_STR);
-$stmt->bindValue(':uname', $username, PDO::PARAM_STR);
+$stmt->bindValue(':pword', $_SESSION["username"], PDO::PARAM_STR);
+$stmt->bindValue(':uname', $_SESSION["password"], PDO::PARAM_STR);
 $stmt->execute();
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))

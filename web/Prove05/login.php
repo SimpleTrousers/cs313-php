@@ -3,8 +3,9 @@
 session_start();
 ?>
 
-<!DOCTYPE <html>
+<!DOCTYPE html>
 <html>
+    <title>Login Page</title>
 <body>
     <h1>Please Log In!</h1>
 
