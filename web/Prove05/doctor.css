@@ -1,0 +1,9 @@
+body {
+    background-color: #D7CEC7;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
