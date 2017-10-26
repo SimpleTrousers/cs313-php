@@ -6,6 +6,7 @@ session_start();
 <head>
 	<title>Appointments Page</title>
 	<link rel="stylesheet" type="text/css" href="doctor.css">
+	<script src="appointment.js"></script>
 </head>
 <body>
 
@@ -48,13 +49,15 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 	// name
 	echo '<h1> Hello! Welcome back, ';
     echo $row['first_name'];
-    echo " ";
+    echo ' ';
     echo $row['last_name'];
-    echo "!";
+    echo '!';
     echo '</h1>';
 }
 
 ?>
+
+<h1>Make an Appointment!</h1>
 
 <form>
 	<table style="text-align: center;">
@@ -102,7 +105,21 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 	</table>
 </form>
 
-<a href="https://cryptic-refuge-67781.herokuapp.com/Prove04/session2.php">Next Session</a>
+<?php
+
+function EndSession() {
+	// remove all session variables
+	session_unset();
+
+	echo 'Session Ended!';
+
+	// destroy the session 
+	session_destroy();
+}
+
+?>
+
+<a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/login.php" onclick="document.write('<?php EndSession(); ?>');">Logout!</a>
 
 </body>
 </html>
