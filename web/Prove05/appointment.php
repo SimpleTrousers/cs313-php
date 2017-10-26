@@ -40,7 +40,7 @@ catch (PDOException $ex)
 	die();
 }
 
-$stmt = $db->prepare('SELECT * FROM public.user');
+$stmt = $db->prepare('SELECT * FROM public.user where username = doctor');
 $stmt->execute();
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
@@ -50,12 +50,17 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 	// name
 	echo '<h1> Hello! Welcome back, ';
     echo $row['first_name'];
+    echo " ";
     echo $row['last_name'];
     echo "!";
     echo '</h1>';
 }
 
 ?>
+
+<div>
+    
+</div>
 
 <a href="https://cryptic-refuge-67781.herokuapp.com/Prove04/session2.php">Next Session</a>
 
