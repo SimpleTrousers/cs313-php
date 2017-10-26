@@ -106,6 +106,11 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 				<input type="number" name="year" maxlength="2" max="18" size="2">
 			</td>
 		</tr>
+		<tr>
+			<td>
+				<input type="submit" value="Make Appointment">
+			</td>
+		</tr>
 	</table>
 </form>
 
