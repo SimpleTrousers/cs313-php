@@ -9,13 +9,6 @@ session_start();
 <body>
 
 <?php
-// Set session variables
-// $_SESSION["favcolor"] = "green";
-// $_SESSION["favanimal"] = "cat";
-// Echo session variables that were set on previous page
-// echo "Favorite color is " . $_SESSION["favcolor"] . ".<br>";
-// echo "Favorite animal is " . $_SESSION["favanimal"] . ".";
-
 // default Heroku Postgres configuration URL
 $dbUrl = getenv('DATABASE_URL');
 
@@ -62,9 +55,51 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 
 ?>
 
-<div>
-    
-</div>
+<form>
+	<table style="width:100%">
+		<tr>
+			<th>Military Hour</th>
+			<th>Day</th>
+			<th>Month</th>
+			<th>Year</th>
+		</tr>
+		<tr>
+			<td>
+				<select name="militaryHour">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+				</select>
+			</td>
+			<td>
+				
+			</td> 
+			<td>Yo</td>
+			<td>Yo</td>
+		</tr>
+	</table>
+</form>
 
 <a href="https://cryptic-refuge-67781.herokuapp.com/Prove04/session2.php">Next Session</a>
 
