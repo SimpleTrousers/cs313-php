@@ -1,6 +1,8 @@
 <?php
 // Start the session
 session_start();
+
+$_SESSION['test'] = "This is a test";
 ?>
 
 <!DOCTYPE html>
