@@ -111,7 +111,7 @@ echo '! ';
 			</td>
 		</tr>
 		<tr>
-			<td>
+			<td colspan="4">
 				<input type="submit" value="Make Appointment">
 			</td>
 		</tr>
