@@ -27,15 +27,6 @@ catch (PDOException $ex)
 	die();
 }
 
-$_SESSION['username'] = $_POST['uname'];
-$_SESSION['password'] = $_POST['pass'];
-
-$fname = "";
-$lname = "";
-
-$_SESSION['fname'] = $fname;
-$_SESSION['lname'] = $lname;
-
 function myTest() {
     $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
 } 
@@ -66,6 +57,16 @@ function appointment() {
 }
 
 if ($_POST['pageFrom'] == 'loginPage') {
+
+    $_SESSION['username'] = $_POST['uname'];
+    $_SESSION['password'] = $_POST['pass'];
+    
+    $fname = "";
+    $lname = "";
+    
+    $_SESSION['fname'] = $fname;
+    $_SESSION['lname'] = $lname;
+
     appointment();
 }
 ?>
