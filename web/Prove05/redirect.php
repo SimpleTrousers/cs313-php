@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 session_regenerate_id(TRUE);
 
@@ -32,26 +33,26 @@ function appointment() {
     $_SESSION['username'] = $_POST['uname'];
     $_SESSION['password'] = $_POST['pass'];
 
-    $stmt = $_SESSION['db']->prepare('SELECT * FROM public.user where username=:uname and password=:pword');
-    $stmt->bindValue(':pword', $_SESSION['username'], PDO::PARAM_STR);
-    $stmt->bindValue(':uname', $_SESSION['password'], PDO::PARAM_STR);
-    $stmt->execute();
+    // $stmt = $_SESSION['db']->prepare('SELECT * FROM public.user where username=:uname and password=:pword');
+    // $stmt->bindValue(':pword', $_SESSION['username'], PDO::PARAM_STR);
+    // $stmt->bindValue(':uname', $_SESSION['password'], PDO::PARAM_STR);
+    // $stmt->execute();
 
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-    {
-        // The variable "row" now holds the complete record for that
-        // row, and we can access the different values based on their
-        // name
-        // echo '<h1> Hello! Welcome back, ';
-    $_SESSION['fname'] = $row['first_name'];
-        // echo ' ';
-    $_SESSION['lname'] = $row['last_name'];
-        // echo '!';
-        // echo '</h1>';
-    }
+    // while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+    // {
+    //     // The variable "row" now holds the complete record for that
+    //     // row, and we can access the different values based on their
+    //     // name
+    //     // echo '<h1> Hello! Welcome back, ';
+    // $_SESSION['fname'] = $row['first_name'];
+    //     // echo ' ';
+    // $_SESSION['lname'] = $row['last_name'];
+    //     // echo '!';
+    //     // echo '</h1>';
+    // }
 
-    $_SESSION['test'] = 'app1';
-    ++$_SESSION['test'];
+    // $_SESSION['test'] = 'app1';
+    // ++$_SESSION['test'];
     
     header("Location: https://cryptic-refuge-67781.herokuapp.com/Prove05/appointment.php");
 }

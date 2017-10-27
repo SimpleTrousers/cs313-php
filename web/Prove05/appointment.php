@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 session_regenerate_id(TRUE);
 ?>
@@ -17,9 +18,9 @@ session_regenerate_id(TRUE);
 	// $stmt = $db->prepare('select * from appointment where doctor_id=:did');
 
 	echo '<h1> Welcome back, ';
-	echo $_SESSION["fname"];
+	echo $_SESSION['username'];
 	echo ' ';
-	echo $_SESSION["lname"];
+	echo $_SESSION['password'];
 	echo '! ';
 	echo $_SESSION['test'];
 
