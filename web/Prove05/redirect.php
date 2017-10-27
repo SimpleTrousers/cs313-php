@@ -15,10 +15,9 @@ $dbName = ltrim($dbopts["path"],'/');
 try
 {
 	// Create the PDO connection
-	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+	$_SESSION['db'] = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 	// this line makes PDO give us an exception when there are problems, and can be very helpful in debugging!
-    $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    $_SESSION["db"] = $db;
+    $_SESSION['db']->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 }
 catch (PDOException $ex)
 {
@@ -29,12 +28,12 @@ catch (PDOException $ex)
 }
 
 function appointment() {
-    $_SESSION["username"] = $_POST["uname"];
-    $_SESSION["password"] = $_POST["pass"];
+    $_SESSION['username'] = $_POST['uname'];
+    $_SESSION['password'] = $_POST['pass'];
 
-    $stmt = $_SESSION["db"]->prepare('SELECT * FROM public.user where username=:uname and password=:pword');
-    $stmt->bindValue(':pword', $_SESSION["username"], PDO::PARAM_STR);
-    $stmt->bindValue(':uname', $_SESSION["password"], PDO::PARAM_STR);
+    $stmt = $_SESSION['db']->prepare('SELECT * FROM public.user where username=:uname and password=:pword');
+    $stmt->bindValue(':pword', $_SESSION['username'], PDO::PARAM_STR);
+    $stmt->bindValue(':uname', $_SESSION['password'], PDO::PARAM_STR);
     $stmt->execute();
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
@@ -43,20 +42,20 @@ function appointment() {
         // row, and we can access the different values based on their
         // name
         // echo '<h1> Hello! Welcome back, ';
-    $_SESSION["fname"] = $row["first_name"];
+    $_SESSION['fname'] = $row['first_name'];
         // echo ' ';
-    $_SESSION["lname"] = $row["last_name"];
+    $_SESSION['lname'] = $row['last_name'];
         // echo '!';
         // echo '</h1>';
     }
 
-    $_SESSION["test"] = "app1";
-    ++$_SESSION["test"];
+    $_SESSION['test'] = 'app1';
+    ++$_SESSION['test'];
     
     header("Location: https://cryptic-refuge-67781.herokuapp.com/Prove05/appointment.php");
 }
 
-if ($_POST["pageFrom"] == "loginPage") {
+if ($_POST['pageFrom'] == 'loginPage') {
     appointment();
 }
 ?>
