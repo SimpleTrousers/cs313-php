@@ -13,6 +13,7 @@ session_regenerate_id(TRUE);
 
 <?php
 
+	var_dump($_SESSION);
 	// $stmt = $db->prepare('select * from appointment where doctor_id=:did');
 
 	echo '<h1> Welcome back, ';

@@ -1,6 +1,7 @@
 <?php
 // Start the session
 session_start();
+session_regenerate_id(TRUE);
 ?>
 
 <!DOCTYPE html>
