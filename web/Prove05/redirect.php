@@ -1,7 +1,8 @@
 <?php
-ob_start();
 session_start();
-session_regenerate_id(TRUE);
+
+$_SESSION['username'] = $_POST['uname'];
+$_SESSION['password'] = $_POST['pass'];
 
 // default Heroku Postgres configuration URL
 $dbUrl = getenv('DATABASE_URL');
