@@ -13,7 +13,7 @@ $_SESSION['test'] = "This is a test";
 
     <form action="redirect.php" method="post">
         Username:
-        <input type="text" name="uname"><br>
+        <input type="text" name="uname" autofocus><br>
         Password:
         <input type="password" name="pass"><br>
         <input type="hidden" name="pageFrom" value="loginPage">
