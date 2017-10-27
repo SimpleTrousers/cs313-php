@@ -37,21 +37,18 @@ function appointment() {
     $stmt->bindValue(':uname', $_SESSION["password"], PDO::PARAM_STR);
     $stmt->execute();
 
-    // while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-    $row = $stmt->fetch(PDO::FETCH_ASSOC);
-    // {
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+    {
         // The variable "row" now holds the complete record for that
         // row, and we can access the different values based on their
         // name
         // echo '<h1> Hello! Welcome back, ';
-    $_SESSION["fname"] = $row['first_name'];
-    echo $row['first_name'];
+    $_SESSION["fname"] = $row["first_name"];
         // echo ' ';
-    $_SESSION["lname"] = $row['last_name'];
-    echo $row['last_name'];
+    $_SESSION["lname"] = $row["last_name"];
         // echo '!';
         // echo '</h1>';
-    // }
+    }
 
     $_SESSION["test"] = "app1";
     ++$_SESSION["test"];
