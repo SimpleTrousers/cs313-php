@@ -16,9 +16,9 @@ session_start();
 	// $stmt = $db->prepare('select * from appointment where doctor_id=:did');
 
 	echo '<h1> Welcome back, ';
-	// echo $_SESSION['username'];
+	echo $_SESSION['username'];
 	echo ' ';
-	// echo $_SESSION['password'];
+	echo $_SESSION['password'];
 	echo '! ';
 	echo $_SESSION['test'];
 
