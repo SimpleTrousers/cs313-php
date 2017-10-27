@@ -47,19 +47,9 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 	// The variable "row" now holds the complete record for that
 	// row, and we can access the different values based on their
 	// name
-	// echo '<h1> Hello! Welcome back, ';
-$_SESSION['fname'] = $row['first_name'];
-	// echo ' ';
-$_SESSION['lname'] = $row['last_name'];
-	// echo '!';
-	// echo '</h1>';
+	$_SESSION['fname'] = $row['first_name'];
+	$_SESSION['lname'] = $row['last_name'];
 }
-
-// $_SESSION['test'] = 'app1';
-// ++$_SESSION['test'];
-
-var_dump($_SESSION);
-// $stmt = $db->prepare('select * from appointment where doctor_id=:did');
 
 echo '<h1> Welcome back, ';
 echo $_SESSION['fname'];
