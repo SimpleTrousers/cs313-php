@@ -12,7 +12,7 @@ session_start();
 
 <?php
 
-$stmt = $db->prepare('select * from appointment where doctor_id=:did');
+// $stmt = $db->prepare('select * from appointment where doctor_id=:did');
 
 
 ?>
