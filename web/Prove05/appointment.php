@@ -11,15 +11,61 @@ session_start();
 <body>
 
 <?php
+// default Heroku Postgres configuration URL
+$dbUrl = getenv('DATABASE_URL');
 
-	var_dump($_SESSION);
-	// $stmt = $db->prepare('select * from appointment where doctor_id=:did');
+$dbopts = parse_url($dbUrl);
 
-	echo '<h1> Welcome back, ';
-	echo $_SESSION['username'];
-	echo ' ';
-	echo $_SESSION['password'];
-	echo '! ';
+$dbHost = $dbopts["host"];
+$dbPort = $dbopts["port"];
+$dbUser = $dbopts["user"];
+$dbPassword = $dbopts["pass"];
+$dbName = ltrim($dbopts["path"],'/');
+
+try
+{
+    // Create the PDO connection
+    $_SESSION['db'] = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+    // this line makes PDO give us an exception when there are problems, and can be very helpful in debugging!
+    $_SESSION['db']->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch (PDOException $ex)
+{
+    // If this were in production, you would not want to echo
+    // the details of the exception.
+    echo "Error connecting to DB. Details: $ex";
+    die();
+}
+
+$stmt = $_SESSION['db']->prepare('SELECT * FROM public.user where username=:uname and password=:pword');
+$stmt->bindValue(':pword', $_SESSION['username'], PDO::PARAM_STR);
+$stmt->bindValue(':uname', $_SESSION['password'], PDO::PARAM_STR);
+$stmt->execute();
+
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+{
+	// The variable "row" now holds the complete record for that
+	// row, and we can access the different values based on their
+	// name
+	// echo '<h1> Hello! Welcome back, ';
+$_SESSION['fname'] = $row['first_name'];
+	// echo ' ';
+$_SESSION['lname'] = $row['last_name'];
+	// echo '!';
+	// echo '</h1>';
+}
+
+// $_SESSION['test'] = 'app1';
+// ++$_SESSION['test'];
+
+var_dump($_SESSION);
+// $stmt = $db->prepare('select * from appointment where doctor_id=:did');
+
+echo '<h1> Welcome back, ';
+echo $_SESSION['fname'];
+echo ' ';
+echo $_SESSION['lname'];
+echo '! ';
 
 ?>
 
