@@ -18,7 +18,8 @@ session_start();
 	echo $_SESSION["fname"];
 	echo ' ';
 	echo $_SESSION["lname"];
-	echo '!';
+	echo '! ';
+	echo $_SESSION['test'];
 
 ?>
 
