@@ -54,10 +54,12 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 }
 ?>
 
-<ul>
-<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/appointment.php">Appointments</a></li>
-<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/login.php" onclick="document.write('<?php EndSession(); ?>');">Logout</a></li>
-</ul>
+<form action="logout.php" method="post">
+	<ul>
+		<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/appointment.php">Appointments</a></li>
+		<li><input type="submit" value="Logout"></li>
+	</ul>
+</form>
 
 <?php
 
@@ -71,7 +73,7 @@ echo '! ';
 
 <h1>Make an Appointment!</h1>
 
-<form action="redirect.php" meethod="post">
+<form action="redirect.php" method="post">
 	<table>
 		<tr>
 			<th>Military Hour</th>
@@ -195,20 +197,6 @@ echo '! ';
 
 	?>
 </table>
-
-<?php
-
-function EndSession() {
-	// remove all session variables
-	session_unset();
-
-	// destroy the session 
-	session_destroy();
-
-	echo '<h1>Session Ended!</h1>';
-}
-
-?>
 
 </body>
 </html>
