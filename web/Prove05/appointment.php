@@ -10,11 +10,6 @@ session_start();
 </head>
 <body>
 
-<ul>
-  <li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/appointment.php">Appointments</a></li>
-  <li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/login.php" onclick="document.write('<?php EndSession(); ?>');">Logout</a></li>
-</ul>
-
 <?php
 // default Heroku Postgres configuration URL
 $dbUrl = getenv('DATABASE_URL');
@@ -57,6 +52,11 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 	$_SESSION['fname'] = $row['first_name'];
 	$_SESSION['lname'] = $row['last_name'];
 }
+
+echo '<ul>
+<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/appointment.php">Appointments</a></li>
+<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/login.php" onclick="document.write("<?php EndSession(); ?>");">Logout</a></li>
+</ul>';
 
 echo '<h1> Welcome back, ';
 echo $_SESSION['fname'];
