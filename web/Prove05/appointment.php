@@ -56,7 +56,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 
 <ul>
 <li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/appointment.php">Appointments</a></li>
-<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/login.php" onclick="document.write("<?php EndSession(); ?>");">Logout</a></li>
+<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/login.php" onclick="document.write('<?php EndSession(); ?>');">Logout</a></li>
 </ul>
 
 <?php
