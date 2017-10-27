@@ -53,11 +53,6 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 	$_SESSION['lname'] = $row['last_name'];
 }
 
-echo '<ul>
-<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/appointment.php">Appointments</a></li>
-<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/login.php" onclick="document.write("<?php EndSession(); ?>");">Logout</a></li>
-</ul>';
-
 echo '<h1> Welcome back, ';
 echo $_SESSION['fname'];
 echo ' ';
@@ -133,6 +128,7 @@ echo '! ';
 		<th>Month</th>
 		<th>Year</th>
 	</tr>
+	
 	<?php
 
 	$stmt = $_SESSION['db']->prepare('SELECT * FROM appointment where doctor_id=:did');
@@ -203,6 +199,11 @@ function EndSession() {
 
 	echo '<h1>Session Ended!</h1>';
 }
+
+echo '<ul>
+<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/appointment.php">Appointments</a></li>
+<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/login.php" onclick="document.write("<?php EndSession(); ?>");">Logout</a></li>
+</ul>';
 
 ?>
 
