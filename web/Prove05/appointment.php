@@ -20,7 +20,6 @@ session_start();
 	echo ' ';
 	echo $_SESSION['password'];
 	echo '! ';
-	echo $_SESSION['test'];
 
 ?>
 
