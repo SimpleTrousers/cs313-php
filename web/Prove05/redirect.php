@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-$username;
-$password;
-
 // default Heroku Postgres configuration URL
 $dbUrl = getenv('DATABASE_URL');
 
@@ -31,8 +28,11 @@ catch (PDOException $ex)
 }
 
 function appointment() {
-    global $username = $_POST['uname'];
-    global $username = $_POST['pass'];
+
+    $_SESSION['test2'] = "This is another test";
+
+    $_SESSION['username'] = $_POST['uname'];
+    $_SESSION['password'] = $_POST['pass'];
 
     $stmt = $_SESSION['db']->prepare('SELECT * FROM public.user where username=:uname and password=:pword');
     $stmt->bindValue(':pword', $_SESSION['username'], PDO::PARAM_STR);
@@ -57,9 +57,6 @@ function appointment() {
     
     header("Location: https://cryptic-refuge-67781.herokuapp.com/Prove05/appointment.php");
 }
-
-$_SESSION['username'] = $username;
-$_SESSION['password'] = $password;
 
 if ($_POST['pageFrom'] == 'loginPage') {
     appointment();
