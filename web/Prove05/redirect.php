@@ -1,5 +1,6 @@
 <?php
 session_start();
+session_regenerate_id(TRUE);
 
 // default Heroku Postgres configuration URL
 $dbUrl = getenv('DATABASE_URL');
