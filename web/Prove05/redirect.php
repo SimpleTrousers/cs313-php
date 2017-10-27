@@ -27,13 +27,20 @@ catch (PDOException $ex)
 	die();
 }
 
+$_SESSION['username'] = $_POST['uname'];
+$_SESSION['password'] = $_POST['pass'];
+
+$fname = "";
+$lname = "";
+
+$_SESSION['fname'] = $fname;
+$_SESSION['lname'] = $lname;
+
+function myTest() {
+    $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
+} 
+
 function appointment() {
-
-    $_SESSION['test2'] = "This is another test";
-
-    $_SESSION['username'] = $_POST['uname'];
-    $_SESSION['password'] = $_POST['pass'];
-
     $stmt = $_SESSION['db']->prepare('SELECT * FROM public.user where username=:uname and password=:pword');
     $stmt->bindValue(':pword', $_SESSION['username'], PDO::PARAM_STR);
     $stmt->bindValue(':uname', $_SESSION['password'], PDO::PARAM_STR);
@@ -45,9 +52,9 @@ function appointment() {
         // row, and we can access the different values based on their
         // name
         // echo '<h1> Hello! Welcome back, ';
-    $_SESSION['fname'] = $row['first_name'];
+    $GLOBALS['fname'] = $row['first_name'];
         // echo ' ';
-    $_SESSION['lname'] = $row['last_name'];
+    $GLOBALS['lname'] = $row['last_name'];
         // echo '!';
         // echo '</h1>';
     }
