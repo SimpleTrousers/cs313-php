@@ -53,10 +53,12 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 	$_SESSION['lname'] = $row['last_name'];
 }
 
-echo '<ul>
+$navBar = '<ul>
 <li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/appointment.php">Appointments</a></li>
 <li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/login.php" onclick="document.write("<?php EndSession(); ?>");">Logout</a></li>
 </ul>';
+
+echo $navBar;
 
 echo '<h1> Welcome back, ';
 echo $_SESSION['fname'];
@@ -204,11 +206,6 @@ function EndSession() {
 
 	echo '<h1>Session Ended!</h1>';
 }
-
-echo '<ul>
-<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/appointment.php">Appointments</a></li>
-<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/login.php" onclick="document.write("<?php EndSession(); ?>");">Logout</a></li>
-</ul>';
 
 ?>
 
