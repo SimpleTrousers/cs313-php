@@ -45,8 +45,10 @@ function appointment() {
         // name
         // echo '<h1> Hello! Welcome back, ';
     $_SESSION["fname"] = $row['first_name'];
+    echo $row['first_name'];
         // echo ' ';
     $_SESSION["lname"] = $row['last_name'];
+    echo $row['last_name'];
         // echo '!';
         // echo '</h1>';
     // }

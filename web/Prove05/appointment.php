@@ -12,12 +12,7 @@ session_start();
 
 <?php
 
-// $stmt = $db->prepare('select * from appointment where doctor_id=:did');
-
-
-?>
-
-<?php
+	// $stmt = $db->prepare('select * from appointment where doctor_id=:did');
 
 	echo '<h1> Welcome back, ';
 	echo $_SESSION["fname"];
