@@ -10,20 +10,6 @@ session_start();
 </head>
 <body>
 
-<?php
-
-function EndSession() {
-	// remove all session variables
-	session_unset();
-
-	// destroy the session 
-	session_destroy();
-
-	echo '<h1>Session Ended!</h1>';
-}
-
-?>
-
 <ul>
   <li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/appointment.php">Appointments</a></li>
   <li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove05/login.php" onclick="document.write('<?php EndSession(); ?>');">Logout</a></li>
@@ -205,6 +191,20 @@ echo '! ';
 
 	?>
 </table>
+
+<?php
+
+function EndSession() {
+	// remove all session variables
+	session_unset();
+
+	// destroy the session 
+	session_destroy();
+
+	echo '<h1>Session Ended!</h1>';
+}
+
+?>
 
 </body>
 </html>
