@@ -6,5 +6,6 @@ $_SESSION['password'] = $_POST['pass'];
 
 if ($_POST['pageFrom'] == 'loginPage') {
     header("Location: https://cryptic-refuge-67781.herokuapp.com/Prove06/appointment.php");
+    die();
 }
 ?>

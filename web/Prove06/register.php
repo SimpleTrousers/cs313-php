@@ -5,12 +5,30 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Page</title>
-    <link rel="stylesheet" type="text/css" href="login.css">
+	<title>Register</title>
 </head>
+
 <body>
-    <form action="login.php" method="post">
-        <input type="submit" class="submit" value="Login">
-    </form>
+<div>
+
+<h1>Sign up for new account</h1>
+
+<form id="mainForm" action="createAccount.php" method="post">
+
+	<input type="text" id="uname" name="uname" placeholder="Username">
+	<label for="uname">Username</label>
+	<br /><br />
+
+	<input type="password" id="pass" name="pass" placeholder="Password"></input>
+	<label for="pass">Password</label>
+	<br /><br />
+
+	<input type="submit" value="Create Account" />
+
+</form>
+
+
+</div>
+
 </body>
 </html>
