@@ -1,13 +1,13 @@
 <?php
-// Start the session
 session_start();
-
-$_SESSION['test'] = "This is a test";
 ?>
 
 <!DOCTYPE html>
 <html>
+<head>
     <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="appointment.css">
+</head>
 <body>
     <h1>Please Log In!</h1>
 
