@@ -93,6 +93,8 @@ $id = $_SESSION['id'];
 	</table>
 </form>
 
+<h1>Current Appointment!</h1>
+
 <table>
 		<tr>
 			<th>Military Hour</th>
