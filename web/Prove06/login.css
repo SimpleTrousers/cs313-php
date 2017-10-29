@@ -3,7 +3,7 @@ body {
     color: #76323F;
 }
 
-input .submit {
+.submit {
     background-color: white;
     border: none;
     color: #565656;
