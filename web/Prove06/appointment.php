@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Appointments Page</title>
+	<title>Make Appointment</title>
 	<link rel="stylesheet" type="text/css" href="appointment.css">
 </head>
 <body>
 
 <form action="logout.php" method="post">
 	<ul>
-		<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove06/appointment.php">Appointments</a></li>
+		<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove06/appointment.php">Make Appointment</a></li>
 		<li><input type="submit" value="Logout"></li>
 	</ul>
 </form>
@@ -86,8 +86,7 @@ $id = $_SESSION['id'];
 		</tr>
 		<tr>
 			<td colspan="4">
-				<?php echo '<input type="hidden" name="id" value="' . $id . '">';
-				echo '<input type="text" name="text" value="' . $id . '">'; ?>
+				<?php echo '<input type="hidden" name="id" value="' . $id . '">'; ?>
 				<input type="submit" class="submit" value="Make Appointment">
 			</td>
 		</tr>
@@ -95,55 +94,27 @@ $id = $_SESSION['id'];
 </form>
 
 <table>
-	<tr>
-		<th colspan="4">My Appointments</th>
-	</tr>
-	<tr>
-		<th>Military Hour</th>
-		<th>Day</th>
-		<th>Month</th>
-		<th>Year</th>
-	</tr>
-	
+		<tr>
+			<th>Military Hour</th>
+			<th>Day</th>
+			<th>Month</th>
+			<th>Year</th>
+		</tr>
 	<?php
 
-	$stmt = $_SESSION['db']->prepare('SELECT * FROM appointment where doctor_id=:did');
-	$stmt->bindValue(':did', $_SESSION['id'], PDO::PARAM_STR);
-	$stmt->execute();
+	require("myApps.php");
+	$row = get_apps();
 
-	while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-	{
-		$mhour = $row['military_hour'];
-		$day = $row['day'];
-		$month = $row['month'];
-		$year = $row['year'];
+	// $stmt = $_SESSION['db']->prepare('SELECT * FROM appointment where doctor_id=:did');
+	// $stmt->bindValue(':did', $_SESSION['id'], PDO::PARAM_STR);
+	// $stmt->execute();
 
-		echo '<tr>';
-		echo '<td>';
-		echo $mhour;
-		echo '</td>';
-		echo '<td>';
-		echo $day;
-		echo '</td>';
-		echo '<td>';
-		echo $month;
-		echo '</td>';
-		echo '<td>';
-		echo $year;
-		echo '</td>';
-		echo '</tr>';
-	}
-
-	$stmt = $_SESSION['db']->prepare('SELECT * FROM appointment where patient_id=:pid');
-	$stmt->bindValue(':pid', $_SESSION['id'], PDO::PARAM_STR);
-	$stmt->execute();
-
-	while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-	{
-		$mhour = $row['military_hour'];
-		$day = $row['day'];
-		$month = $row['month'];
-		$year = $row['year'];
+	// while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+	// {
+	// 	$mhour = $row['military_hour'];
+	// 	$day = $row['day'];
+	// 	$month = $row['month'];
+	// 	$year = $row['year'];
 
 		echo '<tr>';
 		echo '<td>';
@@ -159,7 +130,34 @@ $id = $_SESSION['id'];
 		echo $year;
 		echo '</td>';
 		echo '</tr>';
-	}
+	// }
+
+	// $stmt = $_SESSION['db']->prepare('SELECT * FROM appointment where patient_id=:pid');
+	// $stmt->bindValue(':pid', $_SESSION['id'], PDO::PARAM_STR);
+	// $stmt->execute();
+
+	// while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+	// {
+	// 	$mhour = $row['military_hour'];
+	// 	$day = $row['day'];
+	// 	$month = $row['month'];
+	// 	$year = $row['year'];
+
+	// 	echo '<tr>';
+	// 	echo '<td>';
+	// 	echo $mhour;
+	// 	echo '</td>';
+	// 	echo '<td>';
+	// 	echo $day;
+	// 	echo '</td>';
+	// 	echo '<td>';
+	// 	echo $month;
+	// 	echo '</td>';
+	// 	echo '<td>';
+	// 	echo $year;
+	// 	echo '</td>';
+	// 	echo '</tr>';
+	// }
 
 	?>
 </table>
