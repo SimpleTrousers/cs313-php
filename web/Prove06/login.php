@@ -7,8 +7,8 @@ $badLogin = false;
 if (isset($_POST['uname']) && isset($_POST['pass']))
 {
 	// they have submitted a username and password for us to check
-	$username = $_POST['txtUser'];
-	$password = $_POST['txtPassword'];
+	$username = $_POST['uname'];
+	$password = $_POST['pass'];
 	// Connect to the DB
 	require("connectDB.php");
 	get_db();
@@ -27,7 +27,8 @@ if (isset($_POST['uname']) && isset($_POST['pass']))
 			$_SESSION['username'] = $username;
 			header("Location: apppointment.php");
 			die();
-		}
+        }
+        else if ($password == $row['password'])
 		else
 		{
 			$badLogin = true;
