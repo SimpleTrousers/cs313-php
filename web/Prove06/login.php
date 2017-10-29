@@ -7,15 +7,19 @@ session_start();
 <head>
     <title>Login Page</title>
     <link rel="stylesheet" type="text/css" href="login.css">
+    <script src="login.js"></script>
 </head>
 <body>
     <h1>Please Login or Register an Account</h1>
 
-    <form action="redirect.php" method="post">
+    <form action="redirect.php" onsubmit="return validate()" method="post">
         Username:
-        <input type="text" name="uname" autofocus><br>
+        <input type="text" id="uname" name="uname" autofocus>
+        <br>
         Password:
-        <input type="password" name="pass"><br>
+        <input type="password" id="pass" name="pass">
+        <br>
+        <br>
         <input type="hidden" name="pageFrom" value="loginPage">
         <input type="submit" class="submit" value="Login">
     </form>
