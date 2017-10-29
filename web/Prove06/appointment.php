@@ -6,7 +6,6 @@ session_start();
 <head>
 	<title>Appointments Page</title>
 	<link rel="stylesheet" type="text/css" href="appointment.css">
-	<script src="appointment.js"></script>
 </head>
 <body>
 
@@ -45,6 +44,8 @@ echo $_SESSION['fname'];
 echo ' ';
 echo $_SESSION['lname'];
 echo '! ';
+
+echo $_SESSION['username'];
 
 ?>
 
