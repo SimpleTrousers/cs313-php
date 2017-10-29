@@ -6,7 +6,7 @@ session_start();
 <html>
 <head>
     <title>Login Page</title>
-    <link rel="stylesheet" type="text/css" href="appointment.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
 </head>
 <body>
     <h1>Please Login or Register an Account</h1>
