@@ -9,7 +9,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="appointment.css">
 </head>
 <body>
-    <h1>Please Log In!</h1>
+    <h1>Please Login or Register an Account</h1>
 
     <form action="redirect.php" method="post">
         Username:
@@ -17,9 +17,10 @@ session_start();
         Password:
         <input type="password" name="pass"><br>
         <input type="hidden" name="pageFrom" value="loginPage">
-        <input type="submit" value="Login">
+        <input type="submit" class="submit" value="Login">
     </form>
-
-    <a href="https://cryptic-refuge-67781.herokuapp.com/Prove06/register.php">Or Please Create an Account!</a>
+    <form action="register.php" method="post">
+        <input type="submit" class="submit" value="Register">
+    </form>
 </body>
 </html>
