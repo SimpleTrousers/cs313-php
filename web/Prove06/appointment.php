@@ -103,7 +103,7 @@ $id = $_SESSION['id'];
 	<?php
 
 	require("myApps.php");
-	$row = get_apps();
+	$row = get_apps($id);
 
 	// $stmt = $_SESSION['db']->prepare('SELECT * FROM appointment where doctor_id=:did');
 	// $stmt->bindValue(':did', $_SESSION['id'], PDO::PARAM_STR);

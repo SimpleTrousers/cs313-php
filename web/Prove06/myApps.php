@@ -1,7 +1,6 @@
 <?php
 
-function get_apps() {
-    $id = $_POST['id'];
+function get_apps($id) {
     
     if (!isset($id) || $id == "")
     {
