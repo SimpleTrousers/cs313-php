@@ -16,15 +16,21 @@
 <?php
 session_start();
 
-echo '<p>';
-echo $_SESSION['username'];
-echo '</p>';
+if (isset($_SESSION['username']))
+{
+	$username = $_SESSION['username'];
+}
+else
+{
+	header("Location: login.php");
+	die();
+}
 
 require("connectDB.php");
 get_db();
 
 $stmt = $_SESSION['db']->prepare('SELECT * FROM public.user where username=:uname');
-$stmt->bindValue(':uname', $_SESSION['username'], PDO::PARAM_STR);
+$stmt->bindValue(':uname', $username, PDO::PARAM_STR);
 $stmt->execute();
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
