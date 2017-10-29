@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // get the data from the POST
 $_SESSION["username"] = $_POST['uname'];
 $_SESSION["password"] = $_POST['pass'];
