@@ -23,6 +23,6 @@ $stmnt->bindValue(':username', $_SESSION["username"]);
 $stmnt->bindValue(':password', $hashedPassword);
 $stmnt->execute();
 // finally, redirect them to the sign in page
-header("Location: signIn.php");
+header("Location: login.php");
 die();
 ?>
