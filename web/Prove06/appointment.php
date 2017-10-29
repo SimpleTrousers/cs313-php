@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +6,19 @@ session_start();
 </head>
 <body>
 
+<form action="logout.php" method="post">
+	<ul>
+		<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove06/appointment.php">Appointments</a></li>
+		<li><input type="submit" value="Logout"></li>
+	</ul>
+</form>
+
 <?php
+session_start();
+
+echo '<p>';
+echo $_SESSION['username'];
+echo '</p>';
 
 require("connectDB.php");
 get_db();
@@ -28,16 +37,6 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 	$_SESSION['fname'] = $row['first_name'];
 	$_SESSION['lname'] = $row['last_name'];
 }
-?>
-
-<form action="logout.php" method="post">
-	<ul>
-		<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove06/appointment.php">Appointments</a></li>
-		<li><input type="submit" value="Logout"></li>
-	</ul>
-</form>
-
-<?php
 
 echo '<h1> Welcome back, ';
 echo $_SESSION['fname'];
