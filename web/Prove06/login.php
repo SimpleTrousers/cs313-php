@@ -19,5 +19,7 @@ $_SESSION['test'] = "This is a test";
         <input type="hidden" name="pageFrom" value="loginPage">
         <input type="submit" value="Login">
     </form>
+
+    <a href="https://cryptic-refuge-67781.herokuapp.com/Prove06/register.php">Or Please Create an Account!</a>
 </body>
 </html>
