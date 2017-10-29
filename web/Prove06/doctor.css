@@ -46,6 +46,9 @@ li input {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    background:none;
+    border:none;
+    font-size:1em;
 }
 
 li a:hover {
