@@ -32,7 +32,7 @@ echo ' ';
 echo $_SESSION['lname'];
 echo '!</h1>';
 
-
+$id = $_SESSION['id'];
 ?>
 
 <h1>Make an Appointment!</h1>
@@ -86,7 +86,8 @@ echo '!</h1>';
 		</tr>
 		<tr>
 			<td colspan="4">
-				<?php echo '<input type="hidden" name="id" value="$_SESSION[\'id\']">'; ?>
+				<?php echo '<input type="hidden" name="id" value="' . $id . '">';
+				echo '<input type="text" name="text" value="' . $id . '">'; ?>
 				<input type="submit" class="submit" value="Make Appointment">
 			</td>
 		</tr>
