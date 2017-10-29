@@ -14,10 +14,10 @@ session_start();
 
     <form action="redirect.php" onsubmit="return validate()" method="post">
         Username:
-        <input type="text" id="uname" name="uname" autofocus>
+        <input type="text" id="uname" name="uname" autofocus required>
         <br>
         Password:
-        <input type="password" id="pass" name="pass">
+        <input type="password" id="pass" name="pass" required>
         <br>
         <br>
         <input type="hidden" name="pageFrom" value="loginPage">
