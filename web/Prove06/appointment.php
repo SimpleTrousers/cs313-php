@@ -118,16 +118,16 @@ $id = $_SESSION['id'];
 
 		echo '<tr>';
 		echo '<td>';
-		echo $mhour;
+		echo $row['military_hour'];
 		echo '</td>';
 		echo '<td>';
-		echo $day;
+		echo $row['day'];
 		echo '</td>';
 		echo '<td>';
-		echo $month;
+		echo $row['month'];
 		echo '</td>';
 		echo '<td>';
-		echo $year;
+		echo $row['year'];
 		echo '</td>';
 		echo '</tr>';
 	// }
