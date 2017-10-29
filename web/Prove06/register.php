@@ -11,15 +11,15 @@ session_start();
 <body>
 <div>
 
-<h1>Sign up for new account</h1>
+<h1>Register an Account</h1>
 
 <form id="mainForm" action="createAccount.php" method="post">
 
-	<input type="text" id="uname" name="uname" placeholder="Username">
+	<input type="text" id="uname" name="uname" placeholder="Username" required>
 	<label for="uname">Username</label>
 	<br /><br />
 
-	<input type="password" id="pass" name="pass" placeholder="Password"></input>
+	<input type="password" id="pass" name="pass" placeholder="Password" required>
 	<label for="pass">Password</label>
 	<br /><br />
 

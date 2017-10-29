@@ -7,7 +7,6 @@ session_start();
 <head>
     <title>Login Page</title>
     <link rel="stylesheet" type="text/css" href="login.css">
-    <script src="login.js"></script>
 </head>
 <body>
     <div>
