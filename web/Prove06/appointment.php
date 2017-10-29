@@ -16,7 +16,7 @@ require("connectDB.php");
 get_db();
 
 $stmt = $_SESSION['db']->prepare('SELECT * FROM public.user where username=:uname');
-$stmt->bindValue(':uname', $_SESSION['password'], PDO::PARAM_STR);
+$stmt->bindValue(':uname', $_SESSION['username'], PDO::PARAM_STR);
 $stmt->execute();
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
