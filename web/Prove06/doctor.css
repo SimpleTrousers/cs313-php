@@ -40,7 +40,7 @@ li a {
     text-decoration: none;
 }
 
-input #submit {
+li input {
     display: block;
     color: #565656;
     text-align: center;

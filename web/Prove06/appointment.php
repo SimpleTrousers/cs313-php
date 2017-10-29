@@ -57,7 +57,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 <form action="logout.php" method="post">
 	<ul>
 		<li><a href="https://cryptic-refuge-67781.herokuapp.com/Prove06/appointment.php">Appointments</a></li>
-		<li><input type="submit" id="submit" value="Logout"></li>
+		<li><input type="submit" value="Logout"></li>
 	</ul>
 </form>
 
