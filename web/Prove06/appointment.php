@@ -117,7 +117,7 @@ echo '! ';
 				<input type="number" name="month" maxlength="2" max="12" size="2">
 			</td>
 			<td>
-				<input type="number" name="year" maxlength="2" max="18" size="2">
+				<input type="number" name="year" maxlength="2" min="2017" max="2018" size="2">
 			</td>
 		</tr>
 		<tr>

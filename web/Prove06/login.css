@@ -1,6 +1,11 @@
 body {
     background-color: #d7cec7;
+    text-align: center;
     color: #76323F;
+}
+
+div {
+    border:1px solid black;
 }
 
 .submit {
