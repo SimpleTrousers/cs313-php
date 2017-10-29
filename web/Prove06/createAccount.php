@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// get the data from the POST
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $username = $_POST['uname'];
@@ -13,12 +12,11 @@ if (!isset($username) || $username == ""
 	header("Location: register.php");
 	die();
 }
-// Let's not allow HTML in our usernames. It would be best to also detect this before
-// submitting the form and preven the submission.
+
 $username = htmlspecialchars($username);
-// Get the hashed password.
+
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-// Connect to the database
+
 require("connectDB.php");
 $db = get_db();
 $query = 'INSERT INTO public.user(username, password, first_name, last_name, admin) VALUES(:username, :password, :fname, :lname, false)';
@@ -28,7 +26,7 @@ $stmnt->bindValue(':password', $hashedPassword);
 $stmnt->bindValue(':fname', $fname);
 $stmnt->bindValue(':lname', $lname);
 $stmnt->execute();
-// finally, redirect them to the login page
+
 header("Location: login.php");
 die();
 ?>

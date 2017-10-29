@@ -29,6 +29,11 @@ input[type=number] {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #C09F80;
 }
 
 ul {
