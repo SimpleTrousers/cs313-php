@@ -15,8 +15,7 @@ session_start();
 require("connectDB.php");
 get_db();
 
-$stmt = $_SESSION['db']->prepare('SELECT * FROM public.user where username=:uname and password=:pword');
-$stmt->bindValue(':pword', $_SESSION['username'], PDO::PARAM_STR);
+$stmt = $_SESSION['db']->prepare('SELECT * FROM public.user where username=:uname');
 $stmt->bindValue(':uname', $_SESSION['password'], PDO::PARAM_STR);
 $stmt->execute();
 
