@@ -85,6 +85,7 @@ echo '!</h1>';
 		</tr>
 		<tr>
 			<td colspan="4">
+				<input type="hidden" name="id" value="$_SESSION['id']">
 				<input type="submit" class="submit" value="Make Appointment">
 			</td>
 		</tr>

@@ -3,6 +3,7 @@
     $day = $_POST['day'];
     $month = $_POST['month'];
     $year = $_POST['year'];
+    $id = $_POST['id'];
 
     require("connectDB.php");
     $db = get_db();
@@ -12,7 +13,7 @@
     $stmnt->bindValue(':day', $day);
     $stmnt->bindValue(':month', $month);
     $stmnt->bindValue(':year', $year);
-    $stmnt->bindValue(':id', $_SESSION['id']);
+    $stmnt->bindValue(':id', $id);
     $stmnt->execute();
 
     header("Location: appointment.php");
