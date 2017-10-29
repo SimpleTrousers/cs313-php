@@ -29,6 +29,11 @@ if (isset($_POST['uname']) && isset($_POST['pass']))
 			die();
         }
         else if ($password == $row['password'])
+        {
+            $_SESSION['username'] = $username;
+            header("Location: apppointment.php");
+			die();
+        }
 		else
 		{
 			$badLogin = true;
