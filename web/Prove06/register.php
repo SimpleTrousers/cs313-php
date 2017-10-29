@@ -14,6 +14,13 @@ session_start();
 <h1>Register an Account</h1>
 
 <form id="mainForm" action="createAccount.php" method="post">
+	<input type="text" id="fname" name="fname" placeholder="First Name" required>
+	<label for="fname">First Name</label>
+	<br /><br />
+
+	<input type="text" id="lname" name="lname" placeholder="Last Name" required>
+	<label for="lname">Last Name</label>
+	<br /><br />
 
 	<input type="text" id="uname" name="uname" placeholder="Username" required>
 	<label for="uname">Username</label>
@@ -24,7 +31,6 @@ session_start();
 	<br /><br />
 
 	<input type="submit" value="Create Account" />
-
 </form>
 
 
