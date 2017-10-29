@@ -11,9 +11,9 @@ if (isset($_POST['uname']) && isset($_POST['pass']))
 	$password = $_POST['pass'];
 	// Connect to the DB
 	require("connectDB.php");
-	get_db();
+	$db = get_db();
 	$query = 'SELECT * FROM public.user WHERE username=:username';
-	$statement = $_SESSION['db']->prepare($query);
+	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
 	$result = $statement->execute();
 	if ($result)

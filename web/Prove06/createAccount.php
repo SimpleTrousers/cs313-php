@@ -20,9 +20,9 @@ $username = htmlspecialchars($username);
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 // Connect to the database
 require("connectDB.php");
-get_db();
+$db = get_db();
 $query = 'INSERT INTO public.user(username, password, first_name, last_name, admin) VALUES(:username, :password, :fname, :lname, false)';
-$stmnt = $_SESSION['db']->prepare($query);
+$stmnt = $db->prepare($query);
 $stmnt->bindValue(':username', $username);
 $stmnt->bindValue(':password', $hashedPassword);
 $stmnt->bindValue(':fname', $fname);

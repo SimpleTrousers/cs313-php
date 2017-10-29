@@ -1,8 +1,7 @@
 <?php
-session_start();
 
 function get_db() {
-    $_SESSION['db'] = NULL;
+    $db = NULL;
     
 	$dbUrl = getenv('DATABASE_URL');
     
@@ -17,9 +16,9 @@ function get_db() {
     try
     {
         // Create the PDO connection
-        $_SESSION['db'] = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+        $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
         // this line makes PDO give us an exception when there are problems, and can be very helpful in debugging!
-        $_SESSION['db']->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+        $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     }
     catch (PDOException $ex)
     {
@@ -28,6 +27,8 @@ function get_db() {
         echo "Error connecting to DB. Details: $ex";
         die();
     }
+
+    return $db
 }
 
 ?>
