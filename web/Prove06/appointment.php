@@ -30,15 +30,13 @@ echo '<h1> Welcome back, ';
 echo $_SESSION['fname'];
 echo ' ';
 echo $_SESSION['lname'];
-echo '! ';
-
-echo $_SESSION['username'];
+echo '!</h1>';
 
 ?>
 
 <h1>Make an Appointment!</h1>
 
-<form action="redirect.php" method="post">
+<form action="makeApp.php" method="post">
 	<table>
 		<tr>
 			<th>Military Hour</th>
@@ -87,7 +85,7 @@ echo $_SESSION['username'];
 		</tr>
 		<tr>
 			<td colspan="4">
-				<input type="submit" value="Make Appointment">
+				<input type="submit" class="submit" value="Make Appointment">
 			</td>
 		</tr>
 	</table>
