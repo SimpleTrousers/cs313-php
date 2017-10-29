@@ -12,25 +12,37 @@ if (isset($_POST['uname']) && isset($_POST['pass']))
 	// Connect to the DB
 	require("connectDB.php");
 	get_db();
-	$query = 'SELECT password FROM public.user WHERE username=:username';
+	$query = 'SELECT * FROM public.user WHERE username=:username';
 	$statement = $_SESSION['db']->prepare($query);
 	$statement->bindValue(':username', $username);
 	$result = $statement->execute();
 	if ($result)
 	{
 		$row = $statement->fetch();
-		$hashedPasswordFromDB = $row['password'];
+        $hashedPasswordFromDB = $row['password'];
+        $fname = $row['first_name'];
+        $lname = $row['last_name'];
+        $admin = $row['admin'];
+        $id = $row['id'];
 		// now check to see if the hashed password matches
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
 			// password was correct, put the user on the session, and redirect to home
-			$_SESSION['username'] = $username;
+            $_SESSION['username'] = $username;
+            $_SESSION['fname'] = $fname;
+            $_SESSION['lname'] = $lname;
+            $_SESSION['admin'] = $admin;
+            $_SESSION['id'] = $id;
 			header("Location: appointment.php");
 			die();
         }
         else if ($password == $row['password'])
         {
             $_SESSION['username'] = $username;
+            $_SESSION['fname'] = $fname;
+            $_SESSION['lname'] = $lname;
+            $_SESSION['admin'] = $admin;
+            $_SESSION['id'] = $id;
             header("Location: appointment.php");
 			die();
         }

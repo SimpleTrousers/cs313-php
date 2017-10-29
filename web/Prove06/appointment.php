@@ -26,24 +26,6 @@ else
 	die();
 }
 
-require("connectDB.php");
-get_db();
-
-$stmt = $_SESSION['db']->prepare('SELECT * FROM public.user where username=:uname');
-$stmt->bindValue(':uname', $username, PDO::PARAM_STR);
-$stmt->execute();
-
-while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-{
-	// The variable "row" now holds the complete record for that
-	// row, and we can access the different values based on their
-	// name
-	$_SESSION['id'] = $row['id'];
-	$_SESSION['admin'] = $row['admin'];
-	$_SESSION['fname'] = $row['first_name'];
-	$_SESSION['lname'] = $row['last_name'];
-}
-
 echo '<h1> Welcome back, ';
 echo $_SESSION['fname'];
 echo ' ';
