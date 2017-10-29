@@ -5,6 +5,13 @@
     $year = $_POST['year'];
     $id = $_POST['id'];
 
+    if (!isset($mH) || $mH == "" || !isset($day) || $day == "" || !isset($month) || $month == ""
+    || !isset($year) || $year == "" || !isset($id) || $id == "")
+    {
+        header("Location: appointment.php");
+        die();
+    }
+
     require("connectDB.php");
     $db = get_db();
     $query = 'INSERT INTO appointment(military_hour, day, month, year, doctor_id, patient_id) VALUES(:mH, :day, :month, :year, :did, :id)';
