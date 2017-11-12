@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Make Appointment</title>
+	<title>Appointment Page</title>
 	<link rel="stylesheet" type="text/css" href="appointment.css">
 </head>
 <body>
@@ -102,66 +102,27 @@ $id = $_SESSION['id'];
 			<th>Month</th>
 			<th>Year</th>
 		</tr>
-	<?php
+<?php
 
-	require("myApps.php");
-	$row = get_apps($id);
+require("myApps.php");
+$row = get_apps($id);
 
-	// $stmt = $_SESSION['db']->prepare('SELECT * FROM appointment where doctor_id=:did');
-	// $stmt->bindValue(':did', $_SESSION['id'], PDO::PARAM_STR);
-	// $stmt->execute();
+echo '<tr>';
+echo '<td>';
+echo $row['military_hour'];
+echo '</td>';
+echo '<td>';
+echo $row['day'];
+echo '</td>';
+echo '<td>';
+echo $row['month'];
+echo '</td>';
+echo '<td>';
+echo $row['year'];
+echo '</td>';
+echo '</tr>';
 
-	// while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-	// {
-	// 	$mhour = $row['military_hour'];
-	// 	$day = $row['day'];
-	// 	$month = $row['month'];
-	// 	$year = $row['year'];
-
-		echo '<tr>';
-		echo '<td>';
-		echo $row['military_hour'];
-		echo '</td>';
-		echo '<td>';
-		echo $row['day'];
-		echo '</td>';
-		echo '<td>';
-		echo $row['month'];
-		echo '</td>';
-		echo '<td>';
-		echo $row['year'];
-		echo '</td>';
-		echo '</tr>';
-	// }
-
-	// $stmt = $_SESSION['db']->prepare('SELECT * FROM appointment where patient_id=:pid');
-	// $stmt->bindValue(':pid', $_SESSION['id'], PDO::PARAM_STR);
-	// $stmt->execute();
-
-	// while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-	// {
-	// 	$mhour = $row['military_hour'];
-	// 	$day = $row['day'];
-	// 	$month = $row['month'];
-	// 	$year = $row['year'];
-
-	// 	echo '<tr>';
-	// 	echo '<td>';
-	// 	echo $mhour;
-	// 	echo '</td>';
-	// 	echo '<td>';
-	// 	echo $day;
-	// 	echo '</td>';
-	// 	echo '<td>';
-	// 	echo $month;
-	// 	echo '</td>';
-	// 	echo '<td>';
-	// 	echo $year;
-	// 	echo '</td>';
-	// 	echo '</tr>';
-	// }
-
-	?>
+?>
 </table>
 
 </body>
